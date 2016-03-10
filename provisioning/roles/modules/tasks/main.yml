@@ -1,4 +1,5 @@
 ---
+drupal_core_path: /var/www/drupal-7.x-dev
 
 - name: get modules
   command: "drush dl -y {{ item }}"
