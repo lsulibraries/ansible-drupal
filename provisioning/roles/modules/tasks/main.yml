@@ -1,5 +1,4 @@
 ---
-
 - name: get modules
   command: "drush dl -y {{ item }}"
   args:
@@ -14,7 +13,7 @@
     chdir: "{{ drupal_core_path }}"
   with_items: "{{ modules }}"
 
-- name: Set permissions so that we can 'generate' features on the host.
+- name: Set permissions so that we can generate features on the host
   file:
     path: "{{ drupal_core_path }}/sites/all/modules/local-features"
     owner: www-data
