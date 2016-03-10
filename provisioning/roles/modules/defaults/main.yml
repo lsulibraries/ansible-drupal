@@ -21,4 +21,5 @@ modules:
   - skeletontheme
   - multipurpose
   - impact_theme
+  - module_filter
 
