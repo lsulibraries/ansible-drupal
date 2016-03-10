@@ -3,7 +3,9 @@
   git:
     repo: https://github.com/lsulibraries/features-hist3119-s16.git
     dest: "{{ drupal_core_path }}/sites/all/modules/local-features"
-
+  git:
+    repo: https://github.com/lsulibraries/geauxshax-shax-objects-feature.git
+    dest: "{{ drupal_core_path }}/sites/all/modules/local-features"
 - name: Enable features
   command: "drush -y en {{ item }}"
   args:
@@ -11,3 +13,4 @@
   with_items:
     - instructor_role
     - student_role
+    - shax_objects
