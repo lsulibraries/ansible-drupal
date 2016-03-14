@@ -1,21 +1,34 @@
 ---
-
 - name: get modules
   command: "drush dl -y {{ item }}"
   args:
     chdir: "{{ drupal_core_path }}"
   with_items: "{{ modules }}"
 
-- include: features.yml
+
 
 - name: enable modules
   command: "drush en -y {{ item }}"
   args:
     chdir: "{{ drupal_core_path }}"
   with_items: "{{ modules }}"
+  
+- name: enable submodules
+  command: "drush en -y {{ item }}"
+  args:
+    chdir: "{{ drupal_core_path }}"
+  with_items: "{{ submodules }}"
 
-- name: Set permissions so that we can 'generate' features on the host.
+- include: features.yml
+
+- name: set default theme
+  command: "drush vset theme_default skeletontheme"
+  args:
+    chdir: "{{ drupal_core_path }}"
+
+
+- name: Set permissions so that we can generate features on the host
   file:
-    path: "{{ drupal_core_path }}/sites/all/modules/local-features"
+    path: "{{ drupal_core_path }}/sites/all/modules/"
     owner: www-data
     recurse: yes

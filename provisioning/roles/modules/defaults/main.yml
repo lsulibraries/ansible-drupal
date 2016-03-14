@@ -1,4 +1,8 @@
----
+# drupal_core_path: /var/www/drupal-7.x-dev
+# modules_dir: "{{ drupal_core_path }}/sites/all/modules"
+# themes_dir: "{{ drupal_core_path  }}/sites/all/themes"
+# libraries_dir: "{{ drupal_core_path }}/sites/all/libraries"
+
 modules:
   - features
   - libraries
@@ -21,4 +25,23 @@ modules:
   - skeletontheme
   - multipurpose
   - impact_theme
+  - module_filter
+  
+submodules:
+ - views_ui
+ - skeletontheme
+ - feeds_ui
+ - feeds_import
+ - feeds_tamper_ui
+ - node_reference
+ - entityreference
+ - image_resize_filter
+ - mediafield
+ - module_filter
+ - pathauto
+ - responsive_menus
+ - special_menu_items
+ - wysiwyg_mediaembed
+ 
+ 
 
