@@ -32,12 +32,10 @@ submodules:
  - skeletiontheme
  - feeds_ui
  - feeds_import
- - feeds_tamper
  - feeds_tamper_ui
  - node_reference
  - entity-reference
  - image_resize_filter
- - media
  - mediafield
  - module_filter
  - pathauto
@@ -45,6 +43,5 @@ submodules:
  - special_menu_items
  - wysiwyg_mediaembed
  
- - 
  
 
