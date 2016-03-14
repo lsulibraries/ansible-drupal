@@ -2,11 +2,11 @@
 - name: Pull in role features
   git:
     repo: https://github.com/lsulibraries/features-hist3119-s16.git
-    dest: "{{ drupal_core_path }}/sites/all/modules/local-features"
+    dest: "{{ drupal_core_path }}/sites/all/modules/local_roles"
 - name: pull in shax features
   git:
     repo: https://github.com/lsulibraries/geauxshax-shax-objects-feature.git
-    dest: "{{ drupal_core_path }}/sites/all/modules/local-features"
+    dest: "{{ drupal_core_path }}/sites/all/modules/shax_objects"
 - name: Enable features
   command: "drush -y en {{ item }}"
   args:
