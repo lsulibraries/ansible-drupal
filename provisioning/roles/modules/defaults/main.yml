@@ -26,4 +26,22 @@ modules:
   - multipurpose
   - impact_theme
   - module_filter
+  
+submodules:
+ - views_ui
+ - skeletiontheme
+ - feeds_ui
+ - feeds_import
+ - feeds_tamper_ui
+ - node_reference
+ - entity-reference
+ - image_resize_filter
+ - mediafield
+ - module_filter
+ - pathauto
+ - responsive_menus
+ - special_menu_items
+ - wysiwyg_mediaembed
+ 
+ 
 
