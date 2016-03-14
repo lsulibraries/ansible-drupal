@@ -34,7 +34,7 @@ submodules:
  - feeds_import
  - feeds_tamper_ui
  - node_reference
- - entity_reference
+ - entityreference
  - image_resize_filter
  - mediafield
  - module_filter
