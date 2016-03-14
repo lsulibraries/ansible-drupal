@@ -23,6 +23,8 @@
 
 - name: set default theme
   command: "drush vset theme_default skeletontheme"
+  args:
+    chdir: "{{ drupal_core_path }}"
 
 
 - name: Set permissions so that we can generate features on the host
