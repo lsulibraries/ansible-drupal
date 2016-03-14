@@ -24,6 +24,6 @@
 
 - name: Set permissions so that we can generate features on the host
   file:
-    path: "{{ drupal_core_path }}/sites/all/modules/local-features"
+    path: "{{ drupal_core_path }}/sites/all/modules/"
     owner: www-data
-    recurse: no
+    recurse: yes
