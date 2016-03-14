@@ -12,6 +12,12 @@
   args:
     chdir: "{{ drupal_core_path }}"
   with_items: "{{ modules }}"
+  
+- name: enable submodules
+  command: "drush en -y {{ item }}"
+  args:
+    chdir: "{{ drupal_core_path }}"
+  with_items: "{{ submodules }}"
 
 - include: features.yml
 
