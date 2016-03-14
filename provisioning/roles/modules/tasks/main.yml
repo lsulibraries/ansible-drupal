@@ -5,13 +5,15 @@
     chdir: "{{ drupal_core_path }}"
   with_items: "{{ modules }}"
 
-- include: features.yml
+
 
 - name: enable modules
   command: "drush en -y {{ item }}"
   args:
     chdir: "{{ drupal_core_path }}"
   with_items: "{{ modules }}"
+
+- include: features.yml
 
 - name: Set permissions so that we can generate features on the host
   file:
