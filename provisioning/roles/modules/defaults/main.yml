@@ -29,12 +29,12 @@ modules:
   
 submodules:
  - views_ui
- - skeletiontheme
+ - skeletontheme
  - feeds_ui
  - feeds_import
  - feeds_tamper_ui
  - node_reference
- - entity-reference
+ - entity_reference
  - image_resize_filter
  - mediafield
  - module_filter
