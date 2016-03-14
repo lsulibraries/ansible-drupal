@@ -10,7 +10,7 @@
 - name: Enable features
   command: "drush -y en {{ item }}"
   args:
-    chdir: "{{ drupal_core_path }}/sites/all/modules/local-features"
+    chdir: "{{ drupal_core_path }}"
   with_items:
     - instructor_role
     - student_role
